@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="device=width-device intial-scale=1">
+<title>calculator</title>
+
+<body>
+	<table>
+		<td>
+			<label>first</label>
+			<input type="text" name="f" id="fv">
+		</td>
+		<td>
+			<label for="second">second</label>
+			<input type="text" name="s" id="sv">
+		</td>
+		<td>
+			<label>result</label>
+			<input type="text" name="" id="Result">
+		</td>
+	</table>
+	<input type="btn" name="add" id="+" onclick="cal(1)" value="+">
+	<input type="btn" name="add" id="-" onclick="cal(2)" value="-">
+	<input type="btn" name="add" id="*" onclick="cal(3)" value="*">
+	<input type="btn" name="add" id="/" onclick="cal(4)" value="/">
+	<script>
+		function cal(k) {
+			var a = document.getElementById("fv").value * 1;
+			var b = document.getElementById("sv").value * 1;
+			var result;
+			switch (k) {
+				case 1:
+					result = a + b;
+					break;
+				case 2:
+					result = b - a;
+					break;
+				case 3:
+					result = a * b
+					break;
+				case 4:
+					result = a / b;
+					break;
+
+
+			}
+			document.getElementById("Result").value = result;
+		}
+
+	</script>
+
+
+</body>
+
+</html>

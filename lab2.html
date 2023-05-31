@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	< <h1 id="res"></h1>
+    <script src="main.js" ></script>
+
+    <h2 id="d">s</h2>
+    <h3 id="da"></h3> -->
+	<form name="login" onsubmit="return validation()">
+		User Name:<input type="text" name="uname">
+		password: <input type="text" name="ps">
+		<input type="submit" name="btn" value="submit">
+		<script>
+			function validation() {
+				var u = document.login.uname.value;
+				var p = document.login.ps.value;
+
+				if (u == "" || p == "") {
+					alert("Both fields should be filled");
+					return;
+				}
+				if (p.length < 6) {
+					alert("it should be atleast 6 characrter");
+					return;
+
+				}
+				var str = u.slice(0, 1);
+				if (u.slice(0, 1) == "_" || u.slice(0, 1) == "@" || str.match(/[0-9]/g)) {
+					alert("Dont use special character or digits");
+					return;
+				}
+
+
+			}
+		</script>
+	</form>
+
+</body>
+
+</html> 
+
